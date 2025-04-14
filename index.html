@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Chess AI</title>
+    <link rel="icon" href="image/titlepic.ico" type="img/x-ico">
+    <meta charset="UTF-8">
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="fb_root"></div>
+
+    <div class="board">
+        <h1 class="header">CHESS AI</h1>
+        <div class="game_container">
+            <div class="control_container">
+                <div id="change_contianer" class="change_team">White's turn!</div>
+                <div id="white_contianer" class="white_team">none</div>
+                <div id="black_contianer" class="black_team">none</div>
+                <div id="totalVictories" class="victory_team">none</div>
+                <button id="man_to_man_button" class="start_man_to_man">Man VS Man</button>
+            </div>
+            <div class="chess_container">
+                <div class="rank">
+                    <li style="margin-top: 15px">8</li>
+                    <li style="margin-top:30px">7</li>
+                    <li style="margin-top: 30px;">6</li>
+                    <li style="margin-top: 30px;">5</li>
+                    <li style="margin-top: 30px;">4</li>
+                    <li style="margin-top: 30px;">3</li>
+                    <li style="margin-top: 30px;">2</li>
+                    <li style="margin-top: 30px;">1</li>
+                </div>
+                <canvas id="chessCanvas" class="chess" width="400" height="400"></canvas>
+                <div class="file">
+                    <li style="float: left; margin-left: 10px;">a</li>
+                    <li style="float: left; margin-left: 45px;">b</li>
+                    <li style="float: left; margin-left: 40px;">c</li>
+                    <li style="float: left; margin-left: 40px;">d</li>
+                    <li style="float: left; margin-left: 40px;">e</li>
+                    <li style="float: left; margin-left: 40px;">f</li>
+                    <li style="float: left; margin-left: 40px;">g</li>
+                    <li style="float: left; margin-left: 40px;">h</li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./javascript/chesspy.js"></script>
+</body>
+</html>
