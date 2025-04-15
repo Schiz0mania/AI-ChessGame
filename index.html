@@ -5,6 +5,14 @@
     <link rel="icon" href="image/titlepic.ico" type="img/x-ico">
     <meta charset="UTF-8">
     <link href="style/main.css" rel="stylesheet" type="text/css">
+
+    <style>
+  #white_contianer,
+  #black_contianer,
+  #totalVictories {
+    display: none;
+  }
+    </style>
 </head>
 
 <body>
@@ -13,13 +21,6 @@
     <div class="board">
         <h1 class="header">CHESS AI</h1>
         <div class="game_container">
-            <div class="control_container">
-                <div id="change_contianer" class="change_team">White's turn!</div>
-                <div id="white_contianer" class="white_team">none</div>
-                <div id="black_contianer" class="black_team">none</div>
-                <div id="totalVictories" class="victory_team">none</div>
-                <button id="man_to_man_button" class="start_man_to_man">Man VS Man</button>
-            </div>
             <div class="chess_container">
                 <div class="rank">
                     <li style="margin-top: 15px">8</li>
@@ -42,6 +43,16 @@
                     <li style="float: left; margin-left: 40px;">g</li>
                     <li style="float: left; margin-left: 40px;">h</li>
                 </div>
+            </div>
+            <div class="control_container">
+                <div id="change_contianer" class="change_team">White's turn!</div>
+
+                <div id="white_contianer" class="white_team">none</div>
+                <div id="black_contianer" class="black_team">none</div>
+                <div id="totalVictories" class="victory_team">none</div>
+
+
+                <button id="man_to_man_button" class="start_man_to_man">Man VS Man</button>
             </div>
         </div>
     </div>

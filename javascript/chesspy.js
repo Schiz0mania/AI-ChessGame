@@ -2,13 +2,18 @@ const BOARD_WIDTH = 8;
 const BOARD_HEIGHT = 8;
 
 const TILE_SIZE = 50;
-const WHITE_TILE_COLOR = "#b3d9f3";
-const BLACK_TILE_COLOR = "#82c1eb";
-const HIGHLIGHT_COLOR = "orange"; //合法移动(捕获)
+// const WHITE_TILE_COLOR = "#b3d9f3";
+// const BLACK_TILE_COLOR = "#82c1eb";
+const WHITE_TILE_COLOR = '#f0d9b5';
+const BLACK_TILE_COLOR = '#b58863';
+
+const HIGHLIGHT_COLOR = "blue"; //合法移动(捕获)
 const ENPASSANT_COLOR = "#10AEFF"; //吃过路兵
 const PROMOTION_COLOR = "#E64340"; //兵升变
 const CASTLING_COLOR = "#09BB07"; //王车易位
 const PERVIOUS_COLOR = "#E6A23C"; //表示对方移动之前的位置
+// const PERVIOUS_COLOR = "blue"; //表示对方移动之前的位置
+
 const WHITE = 0;
 const BLACK = 1;
 
