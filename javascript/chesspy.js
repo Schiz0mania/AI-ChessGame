@@ -180,13 +180,16 @@ function startGame() {
 
 manTomanButton.onclick = function() {
     keyCount++;
-    if (keyCount % 2 === 1) {
-        isAI = true;
-        manTomanButton.innerHTML = "Man VS AI";
-    } else {
-        isAI = false;
-        manTomanButton.innerHTML = "Man VS Man";
-    }
+
+    // if (keyCount % 2 === 1) {
+    //     isAI = true;
+    //     manTomanButton.innerHTML = "Man VS AI";
+    // } else {
+    //     isAI = false;
+    //     manTomanButton.innerHTML = "Man VS Man";
+    // }
+    isAI = true;
+    manTomanButton.innerHTML = "Refresh"
     startGame(); //
 }
 
