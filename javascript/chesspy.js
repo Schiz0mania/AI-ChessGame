@@ -70,7 +70,7 @@ let whiteVictories;
 let blackVictories;
 
 let keyCount = 0;
-let isAI = false;
+let isAI = true;
 var manTomanButton = document.getElementById("man_to_man_button");
 let ws;
 let wsIsopen = false;

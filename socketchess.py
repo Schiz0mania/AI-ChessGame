@@ -175,48 +175,6 @@ class ChessBoard:
             evalue_mate = - self.board.is_checkmate()*8 - self.board.is_check()*2
         return evalue_pos * 10 + evalue_cap * 15 + evalue_mate * 10
 
-# async def exa(websocket, path):
-#     global chess_instance
-#     i=0
-#
-#     while True:
-#         rev = await websocket.recv()
-#         print(rev)
-#         data = json.loads(rev)
-#         print(data)
-#
-#         uuid = data["uuid"]
-#         #print(rev["uuid"])
-#        # i=i+1
-#
-#         #print(data["uuid"],data["movement"],data["arg"],data["isai"])
-#
-#         try:
-#             cursor=conn.cursor()
-#             sql="insert into chess_situation(uuid,movement,arg,isai) values (%s,%s,%s,%s);"
-#             cursor.execute(sql,(data["uuid"],data["movement"],data["arg"],data["isai"]))
-#             conn.commit()
-#         except:
-#             conn.rollback()
-#         #conn.close()
-#
-#         if(data["arg"] == "gaming"):
-#             chess_instance[uuid].board.push_uci(data["movement"])
-#         elif(data["arg"] == "start"):
-#             chess_instance[uuid] =  ChessBoard()#开始游戏 创建新实例
-#
-#         print(chess_instance[uuid].board)
-#         print(chess_instance[uuid].board.fen())
-#
-#         if(data["isai"] != None and (not data["isai"]) == chess_instance[uuid].board.turn):#AI情况下 轮到AI
-#             boardinfo = {"legalmove":chess_instance[uuid].legalmove(), "status":chess_instance[uuid].status(), "ai":chess_instance[uuid].nextstep(4, -99999, 99999)[0]}
-#             await websocket.send(json.dumps(boardinfo))
-#         else:
-#             boardinfo = {"legalmove":chess_instance[uuid].legalmove(), "status":chess_instance[uuid].status(), "ai":None}
-#             await websocket.send(json.dumps(boardinfo))
-
-
-# --------------------------------
 async def exa(websocket):
     global chess_instance
     try:
@@ -274,23 +232,6 @@ async def exa(websocket):
         print(f"连接被关闭: {e}")
     except Exception as e:
         print(f"发生未知异常: {e}")
-
-
-
-# start_server = websockets.serve(exa, "127.0.0.1", 5678) #本地运行
-# asyncio.get_event_loop().run_until_complete(start_server)
-# asyncio.get_event_loop().run_forever()
-
-
-# async def main():
-#    async with websockets.serve(exa, "127.0.0.1", 5678):
-#        print("WebSocket server started at ws://127.0.0.1:5678")
-#        await asyncio.Future()  # 无限挂起，保持服务运行
-#
-# 推荐的启动方式
-# asyncio.run(main())
-
-
 
 async def main():
     async with websockets.serve(exa, "127.0.0.1", 5678):

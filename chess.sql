@@ -1,18 +1,3 @@
-/*
- Navicat Premium Data Transfer
-
- Source Server         : xly
- Source Server Type    : MySQL
- Source Server Version : 80018
- Source Host           : localhost:3306
- Source Schema         : chess
-
- Target Server Type    : MySQL
- Target Server Version : 80018
- File Encoding         : 65001
-
- Date: 06/01/2021 14:33:28
-*/
 USE chess;
 
 SET NAMES utf8mb4;
