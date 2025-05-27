@@ -5,3 +5,4 @@
 3. run socketchess.py
 4. access the game on
 ```http://localhost:8081/index.html```
+![overview](./image/overview.png "overview")
